@@ -12,7 +12,7 @@ Pada Mini Project 3, program dikembangkan dengan menerapkan:
 
 ---
 
-## 1. Fitur Program
+## 1. Fitur Program 🌱
 
 Program memiliki beberapa fitur utama, yaitu:
 
@@ -35,7 +35,7 @@ Evaluasi kelayakan fasilitas terdiri dari:
 
 ---
 
-## 2. Struktur Package
+## 2. Struktur Package 📗
 
 Program ini menggunakan **Model-View-Controller (MVC)** dengan tambahan package `helper`.
 
@@ -70,7 +70,7 @@ Package `main` berisi class `Main` sebagai **entry point** untuk menjalankan pro
 
 ---
 
-## 3. Alur Program
+## 3. Alur Program 🛝
 
 Ketika program dijalankan, pengguna akan melihat menu utama:
 
