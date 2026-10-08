@@ -290,8 +290,7 @@ Beberapa validasi yang diterapkan antara lain:
   - `2` = Cukup
   - `3` = Rusak
 
-
-<img width="510" height="412" alt="image" src="https://github.com/user-attachments/assets/44deac03-36fc-44a9-a262-7f0428e9713d" />
+  <img width="510" height="412" alt="image" src="https://github.com/user-attachments/assets/44deac03-36fc-44a9-a262-7f0428e9713d" />
 
 - Pilihan kategori fasilitas hanya `1` atau `2`.
 
