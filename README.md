@@ -291,7 +291,7 @@ Beberapa validasi yang diterapkan antara lain:
   - `3` = Rusak
 
 
-  <img width="456" height="172" alt="image" src="https://github.com/user-attachments/assets/efb1d993-ff4c-4939-92b6-01684b62c9b6" />
+<img width="510" height="412" alt="image" src="https://github.com/user-attachments/assets/44deac03-36fc-44a9-a262-7f0428e9713d" />
 
 - Pilihan kategori fasilitas hanya `1` atau `2`.
 
