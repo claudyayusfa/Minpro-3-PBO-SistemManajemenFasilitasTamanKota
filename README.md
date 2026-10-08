@@ -81,3 +81,67 @@ Alur penggunaan program adalah sebagai berikut:
 1. Program menampilkan menu utama.
 2. Pengguna memilih menu 1-5.
 3. Menu **Tampilkan Fasilitas** menampilkan seluruh data fasilitas yang tersimpan.
+4. Menu **Tambah Fasilitas** meminta pengguna memilih kategori Fasilitas Umum atau Fasilitas Olahraga. ID fasilitas dibuat secara otomatis oleh program.
+5. Menu **Hapus Fasilitas** menghapus fasilitas berdasarkan ID.
+6. Menu **Update Fasilitas** memperbarui nama, kondisi, dan jumlah fasilitas berdasarkan ID.
+7. Menu **Keluar** menghentikan program.
+8. Program akan terus menampilkan menu sampai pengguna memilih menu keluar.
+
+Program memiliki dua dummy data awal, yaitu **Gazebo** sebagai Fasilitas Umum dan **Lapangan Basket** sebagai Fasilitas Olahraga.
+
+---
+
+## 4. Encapsulation
+
+Penerapan **encapsulation** terdapat pada class `Fasilitas`, `FasilitasUmum`, dan `FasilitasOlahraga`.
+
+Atribut pada class dibuat menggunakan access modifier `private`, contohnya:
+
+<img width="382" height="146" alt="image" src="https://github.com/user-attachments/assets/618d8c65-a355-4f44-90e2-fcabbdb981dd" />
+
+Data tersebut diakses dan diubah melalui **getter dan setter**.
+
+Setter juga memiliki validasi untuk menjaga agar data yang disimpan tetap sesuai, seperti:
+
+- ID harus lebih dari `0`.
+- Nama tidak boleh kosong.
+- Kondisi hanya dapat berupa `Baik`, `Cukup`, atau `Rusak`.
+- Jumlah tidak boleh negatif.
+- Jenis fasilitas tidak boleh kosong.
+
+Dengan encapsulation, atribut tidak dapat diakses atau diubah secara langsung dari luar class.
+
+---
+
+## 5. Inheritance
+
+Program menerapkan **inheritance** dengan class `Fasilitas` sebagai superclass dan dua subclass:
+
+<img width="1448" height="928" alt="Untitled Diagram drawio (1)" src="https://github.com/user-attachments/assets/06c4b5db-468c-4fcb-aa6d-76babbf46043" />
+
+Class `FasilitasUmum` dan `FasilitasOlahraga` menggunakan:
+
+- <img width="726" height="38" alt="image" src="https://github.com/user-attachments/assets/73e51dbc-ae6a-4bc1-b391-090ac4af6e39" />
+
+- <img width="788" height="38" alt="image" src="https://github.com/user-attachments/assets/f98d1cc3-867b-497f-8476-b9ff1f8ba7df" />
+
+Kedua subclass mewarisi atribut dan method umum dari `Fasilitas`, seperti:
+
+- `id`
+- `nama`
+- `kondisi`
+- `jumlah`
+- getter dan setter
+- `tampilkanInfo()`
+
+Selain atribut yang diwariskan, masing-masing subclass memiliki atribut khusus:
+
+- `FasilitasUmum` memiliki `jenis`.
+- `FasilitasOlahraga` memiliki `jenisOlahraga`.
+
+Constructor subclass menggunakan `super(...)` untuk memanggil constructor dari superclass seperti ini:
+
+- <img width="1356" height="146" alt="image" src="https://github.com/user-attachments/assets/719d5969-b67c-46e5-aea4-d8dc87b7bbfe" />
+
+---
+
