@@ -91,9 +91,9 @@ Program memiliki dua dummy data awal, yaitu **Gazebo** sebagai Fasilitas Umum da
 
 ---
 
-## 4. Encapsulation
+## 4. Encapsulation 💊
 
-Penerapan **encapsulation** terdapat pada class `Fasilitas`, `FasilitasUmum`, dan `FasilitasOlahraga`.
+Penerapan **encapsulation** terdapat pada class `Fasilitas`, `FasilitasUmum`, dan `FasilitasOlahraga`. Encapsulation adalah prinsip yang menggabungkan data (atribut) dan metode (fungsi) ke dalam satu unit tunggal, yaitu kelas, dan membatasi akses langsung dari luar.
 
 Atribut pada class dibuat menggunakan access modifier `private`, contohnya:
 
@@ -113,9 +113,9 @@ Dengan encapsulation, atribut tidak dapat diakses atau diubah secara langsung da
 
 ---
 
-## 5. Inheritance
+## 5. Inheritance 📜
 
-Program menerapkan **inheritance** dengan class `Fasilitas` sebagai superclass dan dua subclass:
+Inheritance adalah prinsip untuk mewarisi atribut dan metode dari satu kelas ke kelas lain. Program menerapkan **inheritance** dengan class `Fasilitas` sebagai superclass dan dua subclass:
 
 <img width="1448" height="928" alt="Untitled Diagram drawio (1)" src="https://github.com/user-attachments/assets/06c4b5db-468c-4fcb-aa6d-76babbf46043" />
 
@@ -145,9 +145,9 @@ Constructor subclass menggunakan `super(...)` untuk memanggil constructor dari s
 
 ---
 
-## 6. Polymorphism
+## 6. Polymorphism 🥨
 
-Program menerapkan dua bentuk polymorphism, yaitu **method overriding** dan **method overloading**.
+Program menerapkan dua bentuk polymorphism, yaitu **method overriding** dan **method overloading**. Polymorphism adalah konsep yang dapat satu nama metode, simbol, atau objek untuk memiliki banyak bentuk atau perilaku yang berbeda.
 
 ### 6.1 Method Overriding
 
@@ -181,7 +181,7 @@ Method dengan satu parameter digunakan untuk menampilkan pesan biasa, sedangkan 
 
 ---
 
-## 7. Abstraction
+## 7. Abstraction 🎨
 
 Program menerapkan **abstraction** menggunakan abstract class dan abstract method. **abstraction** (abstraksi) adalah konsep untuk menyembunyikan detail implementasi yang rumit dan hanya menampilkan fungsi-fungsi penting dari suatu objek.
 
@@ -215,7 +215,7 @@ Dengan begitu, setiap subclass menentukan kategori sesuai dengan jenis fasilitas
 
 ---
 
-## 8. Interface (Nilai Tambah)
+## 8. Interface (Nilai Tambah) 🧩
 
 Nilai tambah pada program adalah penerapan **interface** melalui `Evalutable`.
 
@@ -243,7 +243,9 @@ Hasil evaluasi ditentukan berdasarkan kondisi fasilitas:
 
 Hasil tersebut ditampilkan bersama informasi fasilitas melalui method `tampilkanInfo()`.
 
-## 9. Implementasi ID Otomatis
+---
+
+## 9. Implementasi ID Otomatis 🤖
 
 Pada proses penambahan data, pengguna tidak perlu memasukkan ID secara manual.
 
@@ -261,7 +263,7 @@ Setiap fasilitas baru akan memperoleh ID secara otomatis dan berurutan.
 
 ---
 
-## 10. Validasi Input
+## 10. Validasi Input ⭐
 
 Program menerapkan validasi untuk mengurangi kesalahan input pengguna.
 
@@ -287,8 +289,9 @@ Beberapa validasi yang diterapkan antara lain:
   - `1` = Baik
   - `2` = Cukup
   - `3` = Rusak
- 
-    <img width="456" height="172" alt="image" src="https://github.com/user-attachments/assets/efb1d993-ff4c-4939-92b6-01684b62c9b6" />
+
+
+  <img width="456" height="172" alt="image" src="https://github.com/user-attachments/assets/efb1d993-ff4c-4939-92b6-01684b62c9b6" />
 
 - Pilihan kategori fasilitas hanya `1` atau `2`.
 
@@ -296,7 +299,7 @@ Beberapa validasi yang diterapkan antara lain:
 
 ---
 
-## 11. Dokumentasi Program
+## 11. Dokumentasi Program 📸
 
 ### 11.1 Menu Utama
 
