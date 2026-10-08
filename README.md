@@ -215,4 +215,66 @@ Dengan begitu, setiap subclass menentukan kategori sesuai dengan jenis fasilitas
 
 ---
 
-## 8. Nilai Tambah — Interface
+## 8. Interface (Nilai Tambah)
+
+Nilai tambah pada program adalah penerapan **interface** melalui `Evalutable`.
+
+Interface tersebut berisi method:
+
+<img width="524" height="334" alt="image" src="https://github.com/user-attachments/assets/65aae1a0-b021-4229-96fe-8d594973bdb0" />
+
+Interface `Evalutable` digunakan sebagai kontrak bahwa class yang mengimplementasikannya harus memiliki kemampuan untuk melakukan evaluasi kelayakan fasilitas.
+
+Interface diimplementasikan oleh:
+
+- <img width="1094" height="40" alt="image" src="https://github.com/user-attachments/assets/591100b1-aafa-4533-ae38-4155e6387bd7" />
+
+- <img width="1154" height="32" alt="image" src="https://github.com/user-attachments/assets/7b16dc1a-3743-4b40-8b38-90a150fde12c" />
+
+Kedua subclass kemudian mengimplementasikan method:
+
+<img width="906" height="372" alt="image" src="https://github.com/user-attachments/assets/cdb367a3-a797-4c75-9548-7582d41d60eb" />
+
+Hasil evaluasi ditentukan berdasarkan kondisi fasilitas:
+
+- `Baik` → Fasilitas layak digunakan.
+- `Cukup` → Fasilitas perlu dipantau.
+- `Rusak` → Fasilitas perlu perbaikan.
+
+Hasil tersebut ditampilkan bersama informasi fasilitas melalui method `tampilkanInfo()`.
+
+## 9. Implementasi ID Otomatis
+
+Pada proses penambahan data, pengguna tidak perlu memasukkan ID secara manual.
+
+Controller memiliki variabel:
+
+<img width="490" height="30" alt="image" src="https://github.com/user-attachments/assets/06ab48b4-3d0d-427f-bd5b-f74328d13ca4" />
+
+dan method:
+
+<img width="448" height="110" alt="image" src="https://github.com/user-attachments/assets/c8dfcb2e-9ac4-4e2b-a793-98ac12d80abc" />
+
+ID dimulai dari `3` karena program telah memiliki dua dummy data dengan ID `1` dan `2`.
+
+Setiap fasilitas baru akan memperoleh ID secara otomatis dan berurutan.
+
+---
+
+## 10. Validasi Input
+
+Program menerapkan validasi untuk mengurangi kesalahan input pengguna.
+
+Beberapa validasi yang diterapkan antara lain:
+
+- Input teks tidak boleh kosong.
+- Input angka harus berupa angka.
+- Angka tidak boleh negatif.
+- ID untuk proses Update dan Delete harus lebih dari `0`.
+- Kondisi fasilitas dipilih melalui pilihan:
+  - `1` = Baik
+  - `2` = Cukup
+  - `3` = Rusak
+- Pilihan kategori fasilitas hanya `1` atau `2`.
+
+---
