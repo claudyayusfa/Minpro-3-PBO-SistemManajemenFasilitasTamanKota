@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class InputHelper {
     
-    private static Scanner input = new Scanner(System.in);
+    private static final Scanner input = new Scanner(System.in);
     
     public static String inputString(String pesan) {
         while (true) {

@@ -43,6 +43,11 @@ public class FasilitasView {
         System.out.println(pesan);
     }
     
+    public void tampilkanPesan(String judul, String pesan){
+        System.out.println("\n" + judul);
+        System.out.println(pesan);
+    }
+    
     public int inputId(){
         while (true){
             int id = InputHelper.inputInteger("ID Fasilitas: ");

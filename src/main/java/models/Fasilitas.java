@@ -1,7 +1,7 @@
 
 package models;
 
-public class Fasilitas {
+public abstract class Fasilitas {
     private int id;
     private String nama;
     private String kondisi;
@@ -67,6 +67,8 @@ public class Fasilitas {
         }
         this.jumlah = jumlah;
     }
+    
+    public abstract String getKategori();
     
     public void tampilkanInfo(){
         System.out.println("ID Fasilitas: " + id);

@@ -11,6 +11,7 @@ public class FasilitasController {
     
     private final ArrayList<Fasilitas> daftarFasilitas;
     private final FasilitasView view;
+    private int idSelanjutnya = 3;
 
     public FasilitasController(FasilitasView view){
         
@@ -23,6 +24,10 @@ public class FasilitasController {
         daftarFasilitas.add(
                 new FasilitasOlahraga(2, "Lapangan Basket", "Baik", 1, "Basket")
         );
+    }
+    
+    private int membuatId() {
+        return idSelanjutnya++;
     }
     
     //READ
@@ -43,12 +48,7 @@ public class FasilitasController {
     public void tambahFasilitas() {
         view.tampilkanJudulProses(" TAMBAH DATA FASILITAS");
         
-        int id = view.inputId();
-        
-        if (idSudahDigunakan(id)){
-            view.tampilkanPesan("ID tersebut sudah digunakan!");
-            return;
-        }
+        int id = membuatId();
         
         String nama = view.inputNama();
         
@@ -77,7 +77,7 @@ public class FasilitasController {
         
         daftarFasilitas.add(fasilitas);
         
-        view.tampilkanPesan("\nFasilitas berhasil ditambahkan!");
+        view.tampilkanPesan("Berhasil!", "Fasilitas berhasil ditambahkan!");
     }
     
     //DELETE
@@ -130,7 +130,4 @@ public class FasilitasController {
         return null;
     }
     
-    private boolean idSudahDigunakan(int id){
-        return cariFasilitas(id) != null;
-    }
 }

@@ -5,7 +5,7 @@ package models;
  *
  * @author LENOVO
  */
-public class FasilitasOlahraga extends Fasilitas{
+public class FasilitasOlahraga extends Fasilitas implements Evalutable{
     private String jenisOlahraga;
     
     public FasilitasOlahraga(int id, String nama, String kondisi, int jumlah, String jenisOlahraga){
@@ -25,9 +25,27 @@ public class FasilitasOlahraga extends Fasilitas{
     }
     
     @Override
+    public String getKategori(){
+        return "Fasilitas Olahraga";
+    }
+    
+    @Override
+    public String evaluasiKelayakan(){
+        if (getKondisi().equalsIgnoreCase("Baik")){
+            return "Fasilitas layak digunakan";
+        } else if (getKondisi().equalsIgnoreCase("Cukup")){
+            return "Fasilitas perlu dipantau";
+        } else {
+            return "Fasilitas perlu perbaikan";
+        }
+    }    
+    
+    @Override
     public void tampilkanInfo(){
         super.tampilkanInfo();
+        System.out.println("Kategori: " + getKategori());
         System.out.println("Olahraga: " + jenisOlahraga);
+        System.out.println("Evaluasi: " + evaluasiKelayakan());
     }
     
 }

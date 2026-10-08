@@ -32,7 +32,7 @@ public class Main {
                     controller.updateFasilitas();
                     break;
                 case 5:
-                    view.tampilkanPesan("Program selesai. Terima kasih sudah menggunakan!");
+                    view.tampilkanPesan("Program selesai. Terima kasih sudah menggunakan program ini!");
                     break;
                     
                 default:
