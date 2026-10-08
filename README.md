@@ -268,13 +268,60 @@ Program menerapkan validasi untuk mengurangi kesalahan input pengguna.
 Beberapa validasi yang diterapkan antara lain:
 
 - Input teks tidak boleh kosong.
+  
+  <img width="362" height="70" alt="image" src="https://github.com/user-attachments/assets/3ba62ee1-4e58-4aba-aa64-1f32ed8f3bab" />
+
 - Input angka harus berupa angka.
+  
+  <img width="376" height="76" alt="image" src="https://github.com/user-attachments/assets/bb57fdc1-c5eb-4b41-8b02-ffbb42d1cd1d" />
+  
 - Angka tidak boleh negatif.
+  
+  <img width="378" height="66" alt="image" src="https://github.com/user-attachments/assets/3bb12e13-68af-42a6-b3d3-1cfd69f0ab8a" />
+
 - ID untuk proses Update dan Delete harus lebih dari `0`.
+  
+  <img width="374" height="140" alt="image" src="https://github.com/user-attachments/assets/1d950b3c-706a-4971-bc31-49a5bf36af0f" />
+
 - Kondisi fasilitas dipilih melalui pilihan:
   - `1` = Baik
   - `2` = Cukup
   - `3` = Rusak
+ 
+    <img width="456" height="172" alt="image" src="https://github.com/user-attachments/assets/efb1d993-ff4c-4939-92b6-01684b62c9b6" />
+
 - Pilihan kategori fasilitas hanya `1` atau `2`.
 
+  <img width="386" height="174" alt="image" src="https://github.com/user-attachments/assets/20d6f4be-7235-44ab-94dd-d98e18a903a0" />
+
 ---
+
+## 11. Dokumentasi Program
+
+### 11.1 Menu Utama
+
+<img width="550" height="346" alt="image" src="https://github.com/user-attachments/assets/1565b544-c560-415c-8e47-3519eaea53de" />
+
+### 11.2 Menampilkan Data Fasilitas
+
+<img width="542" height="704" alt="image" src="https://github.com/user-attachments/assets/27b22322-f48f-4673-beb0-208d7094e47a" />
+
+### 11.3 Menambahkan Fasilitas Umum
+
+<img width="554" height="728" alt="image" src="https://github.com/user-attachments/assets/6e8b01be-324a-41c6-9b2a-444a53b2c290" />
+
+### 11.4 Menambahkan Fasilitas Olahraga
+
+<img width="676" height="720" alt="image" src="https://github.com/user-attachments/assets/6cf57646-2cc0-4ec2-93c0-609a83d6579e" />
+
+### 11.5 Hapus Data Fasilitas
+
+<img width="550" height="220" alt="image" src="https://github.com/user-attachments/assets/a9cd3667-1623-45a3-8747-690e828e4820" />
+
+### 11.6 Update Data Fasilitas
+
+<img width="546" height="514" alt="image" src="https://github.com/user-attachments/assets/46b713b5-edd5-44f2-93c6-e47d2ae7e87f" />
+
+### 11.7 Keluar dari Program
+
+<img width="1026" height="270" alt="image" src="https://github.com/user-attachments/assets/4c5d0f6d-379a-42a9-a8f3-28a9ef65cccc" />
