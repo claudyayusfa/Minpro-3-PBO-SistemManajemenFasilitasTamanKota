@@ -1,44 +1,83 @@
-# Sistem Manajemen Fasilitas Taman Kota 🌳💟
+# Sistem Manajemen Fasilitas Taman Kota 🌞🐝🌸🌿
 
-## 1. Deskripsi Program
+Program **Sistem Manajemen Fasilitas Taman Kota** adalah program berbasis Java yang digunakan untuk mengelola data fasilitas yang terdapat pada taman kota. Program ini dikembangkan dari Mini Project 2 dengan menggunakan konsep **Object-Oriented Programming (OOP)** dan struktur **Model-View-Controller (MVC)**.
+  
+Program Sistem Manajemen Fasilitas Taman Kota dapat mengelola dua kategori fasilitas, yaitu **Fasilitas Umum** dan **Fasilitas Olahraga**. Pada program ini, disediakan fitur untuk menampilkan, menambahkan, menghapus, dan memperbarui data fasilitas.
+  
+Pada Mini Project 3, program dikembangkan dengan menerapkan:
 
-**Sistem Manajemen Fasilitas Taman Kota** adalah program berbasis Java yang digunakan untuk mengelola data fasilitas pada taman kota. Program ini merupakan pengembangan dari Mini Project 1 dengan menerapkan konsep Pemrograman Berorientasi Objek (PBO). 
+- polymorphism (overriding dan overloading)
+- abstraction (abstract class dan abstract method)
+- interface
 
-Program menyediakan fitur **CRUD (Create, Read, Update, Delete)** untuk menampilkan, menambahkan, memperbarui, dan menghapus data fasilitas yang berada di taman kota.
+---
 
-Fasilitas pada program dibagi menjadi dua jenis, yaitu:
-- **Fasilitas Umum** seperti gazebo, tempat duduk, tempat sampah, dan fasilitas umum lainnya.
-- **Fasilitas Olahraga** seperti lapangan basket, lapangan voli, dan fasilitas olahraga lainnya.
+## 1. Fitur Program 🌱
 
-## 2. Struktur Program
-Program dibagi menjadi beberapa package sebagai berikut:
+Program memiliki beberapa fitur utama, yaitu:
 
-<img width="738" height="542" alt="image" src="https://github.com/user-attachments/assets/77361da6-99c8-419d-907e-4a3b24ac1eeb" />
+- Menampilkan seluruh data fasilitas taman kota.
+- Menambahkan fasilitas umum atau fasilitas olahraga.
+- Membuat ID fasilitas secara otomatis.
+- Memperbarui data fasilitas berdasarkan ID fasilitas.
+- Menghapus data fasilitas berdasarkan ID fasilitas.
+- Memvalidasi input pengguna.
+- Menampilkan kategori fasilitas.
+- Mengevaluasi kelayakan fasilitas berdasarkan kondisi secara otomatis.
 
-Penjelasan masing-masing package, yaitu:
-- **`models`** berisi class yang mewakili data fasilitas yaitu `Fasilitas`, `FasilitasUmum`, dan `FasilitasOlahraga`.
-- **`view`** berisi `FasilitasView` yang menangani tampilan program dan input dari pengguna.
-- **`controller`** berisi `FasilitasController` yang menangani proses CRUD dan pengelolaan data fasilitas.
-- **`helper`** berisi `InputHelper` yang membantu proses input dan validasi input.
-- **`main`** berisi `Main` sebagai entry point untuk menjalankan program.
+Evaluasi kelayakan fasilitas terdiri dari:
 
-## 3. Penjelasan Alur Program
+| Kondisi | Hasil Evaluasi |
+|---|---|
+| Baik | Fasilitas layak digunakan |
+| Cukup | Fasilitas perlu dipantau |
+| Rusak | Fasilitas perlu perbaikan |
 
-Ketika program dijalankan, class 'Main' membuat objek `FasilitasView` dan `FasilitasController`. Pada saat `FasilitasController` dibuat, program secara otomatis memasukkan dummy data ke dalam `ArrayList`.
+---
 
-Setelah itu, program menampilkan menu utama:
+## 2. Struktur Package 📗
 
-<img width="564" height="352" alt="image" src="https://github.com/user-attachments/assets/b5e61d53-dc20-44c4-a5e0-b53dc16ea8b5" />
+Program ini menggunakan **Model-View-Controller (MVC)** dengan tambahan package `helper`.
 
-Alur dari setiap menu adalah:
+<img width="746" height="582" alt="image" src="https://github.com/user-attachments/assets/7b06fd07-4741-4832-ac72-253166182f78" />
 
-1. **Tampilkan Fasilitas**
-   Menampilkan seluruh data fasilitas yang tersimpan di dalam `ArrayList`.
-2. **Tambah Fasilitas**
-   Pengguna memasukkan ID, nama, jenis fasilitas, kondisi, dan jumlah fasilitas. Pengguna dapat memilih antara Fasilitas Umum dan Fasilitas Olahraga.
-3. **Hapus Fasilitas**
-   Pengguna memasukkan ID fasilitas. Jika ID ditemukan, data fasilitas akan dihapus dari `ArrayList`.
-4. **Update Fasilitas**
-   Pengguna memasukkan ID fasilitas yang akan diperbarui. Program kemudian meminta nama, kondisi, dan jumlah fasilitas baru.
-5. **Keluar dari Program**
-   Program berhenti dan menampilkan pesan bahwa program telah selesai.
+### 2.1 Model
+
+Package `models` menyimpan class dan interface yang berhubungan dengan data dan karakteristik fasilitas.
+
+- `Fasilitas` adalah **abstract superclass** yang menyimpan atribut umum fasilitas.
+- `FasilitasUmum` adalah subclass untuk fasilitas umum.
+- `FasilitasOlahraga` adalah subclass untuk fasilitas olahraga.
+- `Evalutable` adalah interface untuk mengevaluasi kelayakan fasilitas.
+
+### 2.2 View
+
+Package `view` berisi class `FasilitasView` yang menangani tampilan program dan interaksi pengguna seperti menampilkan menu, data fasilitas, pesan, dan menerima input.
+
+### 2.3 Controller
+
+Package `controller` berisi class `FasilitasController` yang mengatur proses pengolahan data seperti **Create, Read, Update, dan Delete (CRUD)**.
+
+Controller juga mengelola `ArrrayList<Fasilitas>` sebagai tempat penyimpanan data selama program berjalan.
+
+### 2.4 Helper
+
+Package `helper` berisi class `InputHelper` yang digunakan untuk menangani dan memvalidasi input pengguna.
+
+### 2.5 Main
+
+Package `main` berisi class `Main` sebagai **entry point** untuk menjalankan program dan menghubungkan View dengan Controller. Entry point (titik masuk) adalah metode `main()` yang kode tempat pertama kali program Java mulai dieksekusi.
+
+---
+
+## 3. Alur Program 🛝
+
+Ketika program dijalankan, pengguna akan melihat menu utama:
+
+<img width="546" height="338" alt="image" src="https://github.com/user-attachments/assets/f7259e26-1afb-470a-935a-c7bf9b0690aa" />
+
+Alur penggunaan program adalah sebagai berikut:
+
+1. Program menampilkan menu utama.
+2. Pengguna memilih menu 1-5.
+3. Menu **Tampilkan Fasilitas** menampilkan seluruh data fasilitas yang tersimpan.
