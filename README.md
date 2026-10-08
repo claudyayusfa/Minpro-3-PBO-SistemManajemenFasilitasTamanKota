@@ -141,7 +141,78 @@ Selain atribut yang diwariskan, masing-masing subclass memiliki atribut khusus:
 
 Constructor subclass menggunakan `super(...)` untuk memanggil constructor dari superclass seperti ini:
 
-- <img width="1356" height="146" alt="image" src="https://github.com/user-attachments/assets/719d5969-b67c-46e5-aea4-d8dc87b7bbfe" />
+<img width="1356" height="146" alt="image" src="https://github.com/user-attachments/assets/719d5969-b67c-46e5-aea4-d8dc87b7bbfe" />
 
 ---
 
+## 6. Polymorphism
+
+Program menerapkan dua bentuk polymorphism, yaitu **method overriding** dan **method overloading**.
+
+### 6.1 Method Overriding
+
+Overriding adalah penulisan ulang metode di kelas anak (subclass) dengan nama dan parameter yang sama persis seperti di kelas induk (superclass).
+
+Method overriding diterapkan pada method `tampilkanInfo()`.
+
+Superclass `Fasilitas` memiliki method:
+
+<img width="782" height="220" alt="image" src="https://github.com/user-attachments/assets/5f5643bd-b3d3-4785-9f13-1417ad3b38c9" />
+
+Kemudian method tersebut di-override pada `FasilitasUmum` dan `FasilitasOlahraga`.
+
+- <img width="962" height="260" alt="image" src="https://github.com/user-attachments/assets/a0796ba0-723c-4842-91b5-110f74fac5b2" />
+
+- <img width="962" height="256" alt="image" src="https://github.com/user-attachments/assets/318b4d39-2e87-40be-ad2c-d15ac13b1bac" />
+
+Dengan overriding, setiap subclass dapat menampilkan informasi tambahan sesuai dengan karakteristik masing-masing fasilitas.
+
+Objek `FasilitasUmum` dan `FasilitasOlahraga` disimpan menggunakan referensi bertipe `Fasilitas`. Ketika `tampilkanInfo()` dipanggil, Java menjalankan method sesuai dengan tipe objek sebenarnya.
+
+### 6.2 Method Overloading
+
+Method overloading diterapkan pada class `FasilitasView` melalui method `tampilkanPesan()`.
+
+<img width="898" height="284" alt="image" src="https://github.com/user-attachments/assets/38a538c0-b106-4967-b2f1-9696215da412" />
+
+Kedua method memiliki **nama yang sama**, tetapi jumlah parameter yang berbeda.
+
+Method dengan satu parameter digunakan untuk menampilkan pesan biasa, sedangkan method dengan dua parameter dapat menampilkan judul dan isi pesan.
+
+---
+
+## 7. Abstraction
+
+Program menerapkan **abstraction** menggunakan abstract class dan abstract method. **abstraction** (abstraksi) adalah konsep untuk menyembunyikan detail implementasi yang rumit dan hanya menampilkan fungsi-fungsi penting dari suatu objek.
+
+### 7.1 Abstract Class
+
+Class `Fasilitas` dibuat sebagai abstract class:
+
+<img width="556" height="44" alt="image" src="https://github.com/user-attachments/assets/c90b70b1-3f7a-4338-b4e9-85dc3b46db20" />
+
+Class tersebut digunakan sebagai dasar untuk menyimpan atribut dan method umum yang dimiliki oleh seluruh jenis fasilitas.
+
+Karena bersifat abstract, class `Fasilitas` tidak digunakan untuk membuat objek secara langsung. Objek dibuat melalui subclass `FasilitasUmum` atau `FasilitasOlahraga`.
+
+### 7.2 Abstract Method
+
+Pada class `Fasilitas` terdapat abstract method:
+
+<img width="614" height="40" alt="image" src="https://github.com/user-attachments/assets/6c6b486a-5a5a-49cb-857d-6ce6c3fe32ae" />
+
+Method tersebut tidak memiliki implementasi pada superclass sehingga setiap subclass harus memberikan implementasinya sendiri.
+
+Pada `FasilitasUmum`:
+
+<img width="458" height="146" alt="image" src="https://github.com/user-attachments/assets/e3e05ee2-c832-4d90-8eeb-145ed0a1ee78" />
+
+Pada `FasilitasOlahraga`:
+
+<img width="522" height="150" alt="image" src="https://github.com/user-attachments/assets/1e0ce73a-553a-479f-a2d2-0828524c997c" />
+
+Dengan begitu, setiap subclass menentukan kategori sesuai dengan jenis fasilitasnya.
+
+---
+
+## 8. Nilai Tambah — Interface
