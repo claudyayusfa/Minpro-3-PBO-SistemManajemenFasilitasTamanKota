@@ -64,3 +64,20 @@ Controller juga mengelola `ArrrayList<Fasilitas>` sebagai tempat penyimpanan dat
 
 Package `helper` berisi class `InputHelper` yang digunakan untuk menangani dan memvalidasi input pengguna.
 
+### 2.5 Main
+
+Package `main` berisi class `Main` sebagai **entry point** untuk menjalankan program dan menghubungkan View dengan Controller. Entry point (titik masuk) adalah metode `main()` yang kode tempat pertama kali program Java mulai dieksekusi.
+
+---
+
+## 3. Alur Program
+
+Ketika program dijalankan, pengguna akan melihat menu utama:
+
+<img width="546" height="338" alt="image" src="https://github.com/user-attachments/assets/f7259e26-1afb-470a-935a-c7bf9b0690aa" />
+
+Alur penggunaan program adalah sebagai berikut:
+
+1. Program menampilkan menu utama.
+2. Pengguna memilih menu 1-5.
+3. Menu **Tampilkan Fasilitas** menampilkan seluruh data fasilitas yang tersimpan.
